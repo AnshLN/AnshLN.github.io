@@ -1,0 +1,106 @@
+*{
+    margin-top: 10px;
+}
+::selection{
+    background-color: black;
+    color: red;
+    text-decoration: line-through;
+}
+
+pre{
+    padding: .1875rem .375rem;
+    font-size: .875em;
+    background-color: #212529;
+    color: #fff;
+    font-family:var(--bs-font-monospace);
+    line-height: var(--bs-body-line-height);
+    margin: inherit;
+}
+pre code{
+    color: var(--bs-code-color);
+}
+.normal-style{
+    background-color: rgb(255, 253, 236);
+    color: red;
+}
+header{
+    text-decoration: underline;
+    font-weight: bold;
+}
+header h2{
+    text-align: center;
+}
+#carNameOutputScreenShow,#carColorOutputScreenShow,#carPriceOutputScreenShow{
+    color: green;
+}
+th,td{width: 50%;}
+#slice-input-text,#slice-input-number-from,#slice-input-number-to{
+    border-style: solid;
+    color: white;
+    transition: all ease-in-out 200ms;
+}
+#slice-input-text:focus,#slice-input-number-from:focus,#slice-input-number-to:focus{
+    border: 2px solid rgb(0, 38, 255) !important;
+    outline: none;
+}
+textarea{
+    resize: both;
+}
+.input-normal-style{
+    border-style: solid;
+    color: white;
+    border: 2px solid rgb(0, 116, 0);
+    border-radius: 6px;
+    background: transparent;
+    transition: border ease-in-out 200ms;
+}
+.input-normal-style:focus{
+    border: 2px solid rgb(0, 38, 255);
+    outline: none;
+}
+.visible-on-input {
+    display: none;
+}
+.square-css{
+    vertical-align: text-top;
+    font-size: 9px;
+    font-weight: bold;
+}
+#ArrayChap1ExampleButton{
+    transition: all ease-out 300ms;
+}
+#ArrayChap1ExampleOutput span{
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    width: auto;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-out 0.25s;
+    overflow: auto;
+}
+#ArrayChap1ExampleOutput span:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.479);
+}
+
+#ArrayChap1ExampleOutput a{
+    margin-left: auto;
+    margin-top: 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    transition: all ease-out 300ms;
+
+}
+#ArrayChap1ExampleOutput a:focus{
+    box-shadow: 1px 1px 10px rgb(18, 87, 235);
+}

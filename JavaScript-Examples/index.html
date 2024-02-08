@@ -1,0 +1,1770 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <header>
+            <h2 class="h2">All JavaScript Content Available Here</h2>
+        </header>
+        <main>
+            <!-- ALL THE CODES ARE IN PRE ELEMENT & ALL THE IMPORTANT NOTES ARE IN CODE ELEMENT -->
+            <div class="container m-4">
+                    <button class="btn btn-outline-success" onclick="ChangeParagraphContent()">
+                        Click me to change paregraph content
+                    </button>
+                    <div id="p-content-Change">Before Button Click</div>
+            <pre>
+                
+                function ChangeParagraphContent()
+                    {
+                    if(document.getElementById('p-content-Change').innerHTML == "Before Button Click")
+                    {
+                        document.getElementById('p-content-Change').innerHTML = "After Button Click!"
+                    }
+                    else
+                    {
+                        document.getElementById('p-content-Change').innerHTML = "Before Button Click";
+                    }
+                    }
+                    <code>JavaScript accepts both double and single quotes: "" , ''</code>
+            </pre>
+            <hr>
+            <div>
+                <Button class="btn btn-outline-danger" onclick="BulbOn()">Click me for active bulb</Button>
+                <Button class="btn btn-outline-danger" onclick="BulbOff()">Click me for off bulb</Button>
+                <br>
+                <img id="Bulb" src="images-container/bulb-off.png" alt="bulb">
+                <pre>
+
+                    function BulbOn(){
+                        document.getElementById('Bulb').src = "images-container/bulb-on.png";
+                    }
+                    function BulbOff(){
+                        document.getElementById('Bulb').src = "images-container/bulb-off.png";
+                    }
+                </pre>
+            </div>
+            <hr>
+            <button class="btn btn-primary" onclick="TextColorChange()">Click to change color</button>
+            <div id="color-change">I Will Be Red</div>
+            <pre>
+
+                function TextColorChange(){
+                    document.getElementById('color-change').style.color = 'red';
+                }
+            </pre>
+            <hr>
+            <button class="btn btn-success" id="display-n" onclick="DisplayNone()">I will display none</button>
+            <pre>
+
+                function DisplayNone(){
+                    document.getElementById('display-n').style.display = "none";
+                }
+                <code>If Script is in Footer The page will Load First Then Script Loads, Which is Good Technique</code>
+            </pre>
+            <hr>
+            <button class="btn btn-danger" onclick="DeleteAllHtmlDoc()">I Will Delete all Html document</button>
+            <pre>
+
+                function DeleteAllHtmlDoc(){
+                    document.write('All Data From html Are Deleted')
+                }
+                <code>document.write() can only be used For testing Purposes</code>
+            </pre>
+            <hr>
+            <button class="btn btn-info text-white" onclick="WindowAlert()">I Will Send Alert On The Window</button>
+            <pre>
+
+                function WindowAlert(){
+                    window.alert('I Am Alert');
+                }
+                <code>window keyword is optional</code>
+                <code>This will also work : </code>
+                alert('I Am Alert');
+            </pre>
+            <hr>
+            <button class="btn btn-warning" onclick="ConsoleNotification()">Press F12 Open Console And Click Me</button>
+            <pre>
+
+                function ConsoleNotification(){
+                    console.log("I am Currently Displaying in Console!")
+                }
+            </pre>
+            <hr>
+            <button class="btn btn-success" onclick="PrintPage()">
+                Print
+            </button>
+            <pre>
+
+                function PrintPage(){
+                    window.print();
+                }
+                <code>This Will Also Work : </code>
+                &lt;button class="btn btn-success" onclick="window.print()">
+                    Print
+                    &lt;/button&gt;
+            </pre>
+            <hr>
+            x = <input type="number" id="iAmX" value="0">
+            <br>
+            y = <input type="number" id="iAmY" value="0">
+            <br>
+            <br>
+            <button class="btn btn-danger" onclick="AdditionFunction()">Click Me To Calculate X + Y</button>
+            <br>
+            <br>
+            X + Y is <mark id="iAmXadditionY">0</mark>
+            <pre>
+
+                function AdditionFunction(){
+                    let x = document.getElementById('iAmX').value;
+                    let y = document.getElementById('iAmY').value;
+                    document.getElementById('iAmXadditionY').innerHTML = parseInt(x) + parseInt(y);
+                }
+            </pre>
+            <hr>
+            x = <input type="number" value="1" id="square">
+            <br><br>
+            x^2 = <input type="number" id="square-d" value="1" disabled> 
+            <br>
+            <br>
+            <button class="btn btn-success" id="calculate">calculate</button>
+            <pre>
+
+                document.getElementById('calculate').onclick = function() {
+                    var square = document.getElementById('square').value;
+                    square = parseFloat(square);
+                    square *= square;
+                    document.getElementById('square-d').value = square;
+                }
+            </pre>
+            <hr>
+            n = <input type="number" id="n-power-n" placeholder="Enter 'n'">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            n^n = <input type="number" id="n-power-n-answer" disabled>
+            <br><br>
+            <code>This Inputs Will Calculate Automatically It Doesnt Required button</code>
+            <pre>
+
+                document.getElementById('n-power-n').oninput = function() {
+                    var nToPowern = document.getElementById('n-power-n').value;
+                    nToPowern = parseFloat(nToPowern);
+                    nToPowern **= nToPowern;
+                    document.getElementById('n-power-n-answer').value = nToPowern;
+                }
+                <code>in + , - , * , / this all * & / have higher precedence than + & - </code>
+                <code>And In This Conditions,</code>
+                <mark>let x = 100 + 50 - 3;</mark>
+                <mark>let x = 100 / 50 * 3;</mark>
+                <code>it will follow left to right.</code>
+            </pre>
+            <hr>
+            <h3>JavaScript Has 8 type of Datatypes : </h3>
+            <ol>
+                <li><h5>String</h5></li>
+                <li><h5>Number</h5></li>
+                <li><h5>Bigint</h5></li>
+                <li><h5>Boolean</h5></li>
+                <li><h5>Undefined</h5></li>
+                <li><h5>Null</h5></li>
+                <li><h5>Symbol</h5></li>
+                <li><h5>Object</h5></li>
+            </ol>
+            <h4>Object can contain,</h4>
+            <ol>
+                <li><h5>An Object</h5></li>
+                <li><h5>An Array</h5></li>
+                <li><h5>A Date</h5></li>
+            </ol>
+            <hr>
+            Enter String or Number in Input Below:
+            <br><br>
+            <input id="string-number" type="text" placeholder="Enter 'String' or 'Number'"><br>
+            <span>The Type of Input is </span><span id="string-number-output"></span>
+            <pre>
+
+                document.getElementById('string-number').oninput = function(){
+                    var StringNumber = document.getElementById('string-number').value;
+                   if(Number.isInteger(Number(StringNumber)) == true)
+                   {
+                    document.getElementById('string-number-output').innerHTML = "Number : " + parseFloat(StringNumber);
+                   }
+                   else if(StringNumber == "")
+                   {
+                    document.getElementById('string-number-output').innerHTML = "";
+                   }
+                   else
+                   {
+                    document.getElementById('string-number-output').innerHTML = "String : " + StringNumber;
+                   }
+                }
+                <mark>Note:</mark> &nbsp;<code>If you Enter Number First Then String Then It Will Ignore the string after the Number and will consider whole string as a number.</code>
+            </pre>
+            <hr>
+            Enter Value of Temprature : <input id="Temp-input" type="number" placeholder="Enter Value in Celcius" oninput="InputFunction()">
+            <br><br>
+            Convert From 
+            <select name="Temprature" id="temprature">
+                <option value="celcius" id="t1" selected>Celcius</option>
+                <option value="fahrenheit" id="t2">fahrenheit</option>
+            </select>
+            To <select name="Temprature-2" id="temprature-inverse">
+                <option value="fahrenheit" id="t3">fahrenheit</option>
+                <option value="celcius" id="t4">Celcius</option>
+            </select>
+
+            <br><br> Celcius : <mark id="output-temp-celcius"></mark><br>
+            fahrenheit : <mark id="output-temp-fahrenheit"></mark>
+            <pre>
+
+                document.getElementById('temprature').onchange = function(){
+   
+                    if(document.getElementById('t1').selected == true){
+                        var te3 = document.getElementById('t3');
+                        te3.selected = true;
+                        document.getElementById('Temp-input').placeholder = "Enter Value in Celcius";
+                    } 
+                   else if(document.getElementById('t2').selected == true){
+                        var te4 = document.getElementById('t4');
+                        te4.selected = true;
+                        document.getElementById('Temp-input').placeholder = "Enter Value in Fahrenheit";
+                    } 
+                    else{}
+                    InputFunction();
+                }
+                
+                document.getElementById('temprature-inverse').onchange = function(){
+                if(document.getElementById('t3').selected == true){
+                    var te1 = document.getElementById('t1');
+                    te1.selected = true;
+                    document.getElementById('Temp-input').placeholder = "Enter Value in Celcius";
+                } 
+                else if(document.getElementById('t4').selected == true){
+                    var te2 = document.getElementById('t2');
+                    te2.selected = true;
+                    document.getElementById('Temp-input').placeholder = "Enter Value in Fahrenheit";
+                } 
+                
+                else{}
+                 InputFunction();
+                }
+                
+                function InputFunction(){
+                    var temppp = document.getElementById('Temp-input').value;
+                    if(document.getElementById('t3').selected == true && temppp !== ""){
+                        document.getElementById('output-temp-celcius').innerHTML = temppp + "&#176;C";
+                        document.getElementById('output-temp-fahrenheit').innerHTML = (parseFloat(temppp)*(9/5) + 32) + "F";
+                    }
+                    else if(document.getElementById('t2').selected == true && temppp !== ""){
+                        document.getElementById('output-temp-fahrenheit').innerHTML = temppp + "F";
+                        document.getElementById('output-temp-celcius').innerHTML = ((parseFloat(temppp) - 32)*5/9) + "&#176;C";
+                    }
+                    else if(temppp == ""){
+                        document.getElementById('output-temp-celcius').innerHTML = "";
+                        document.getElementById('output-temp-fahrenheit').innerHTML = "";
+                    }
+                }
+            </pre>
+            <hr>
+            <h3> CAR : </h3>
+            <input id="car-name" type="text" placeholder="Enter Name Here">
+            <input id="car-color" type="text" placeholder="Enter color Here">
+            <input id="car-price" type="text" placeholder="Enter Price Here">
+            <br>
+            <button class="btn btn-outline-info mt-2" onclick="objectFunction()">On Clicking Me All Entred value will be Saved in Object "Car".</button><br>
+            <pre class="normal-style">
+const carObject = {
+    carName:"<span id="carNameOutputScreenShow"></span>",
+    carColor:"<span id="carColorOutputScreenShow"></span>",
+    carPrice:"<span id="carPriceOutputScreenShow"></span>"
+};</pre>
+            <br>
+            <Button class="btn btn-outline-primary my-2" onclick="ObjectFunctionRun()">Click Me To Print Values From saved "Object"</Button><br>
+            The Car Name Is : <mark id="car-name-output"></mark><br>
+            The Car Color Is : <mark id="car-color-output"></mark><br>
+            The Car price Is : <mark id="car-price-output"></mark><br>
+            <pre>
+
+                const carObject = {carName:"",carColor:"",carPrice:""};
+                function objectFunction(){
+                carObject.carName = document.getElementById('car-name').value;
+                carObject.carColor = document.getElementById('car-color').value;
+                carObject.carPrice = document.getElementById('car-price').value;
+                document.getElementById('carNameOutputScreenShow').innerHTML = carObject.carName;
+                document.getElementById('carColorOutputScreenShow').innerHTML = carObject.carColor;
+                document.getElementById('carPriceOutputScreenShow').innerHTML = carObject.carPrice;
+                }
+                function ObjectFunctionRun(){
+                document.getElementById('car-name-output').innerHTML = carObject.carName;
+                document.getElementById('car-color-output').innerHTML = carObject.carColor;
+                document.getElementById('car-price-output').innerHTML = carObject.carPrice;
+                }
+                <code>It Is Good Method To Always Declare Object with const </code>
+            </pre>
+            <hr>
+            <textarea type="text" id="StringCounterInput" placeholder="Enter Text here..." class="my-2"></textarea> <br>
+            <span>The Above Input Have Length of <mark id="StringCounterOutput"></mark></span>
+            <pre>
+
+                document.getElementById('StringCounterInput').oninput = function(){
+                    var StringCounter = this.value;
+                    document.getElementById('StringCounterOutput').innerHTML = StringCounter.length;
+                }
+            </pre>
+            <hr>
+            Backslash Escape Charecter Turns Special Charecter Into String Charecters : 
+            <table class="table table-hover table-bordered table-striped table-dark">
+                <thead><tr><th> Code </th><th> Result </th></tr></thead>
+                <tbody>
+                    <tr><td> \' </td><td> ' </td></tr>
+                    <tr><td> \" </td><td> " </td></tr>
+                    <tr><td> \\ </td><td> \ </td></tr>
+                    <tr><td> \b </td><td> Backspace </td></tr>
+                    <tr><td> \f </td><td> Form Feed </td></tr>
+                    <tr><td> \n </td><td> New Line </td></tr>
+                    <tr><td> \r </td><td> Carriage Return </td></tr>
+                    <tr><td> \t </td><td> Horizontle Tabulater </td></tr>
+                    <tr><td> \v </td><td> Vertical Tabulater </td></tr>
+                </tbody>
+            </table>
+            <hr>
+            <p>String can also be defined as object : </p>
+            <pre class="normal-style">
+let x = "Text";
+let y = new String("Text");
+            </pre>
+            if this is compared with <mark>"=="</mark> It Is equal but Comprating with <mark>"==="</mark> It Is Not Equal, <br>
+            ==&nbsp;&nbsp;:&nbsp;&nbsp;Compares Value Which is Equal <br>
+            ===&nbsp;&nbsp;:&nbsp;&nbsp;Compares Value and Type,Type is not Equal
+            <hr>
+            The Text Is <input id="CharAtExample" type="text" value="i am unchangeable :)" disabled>
+            <br>Which Number of Charecter You Want To Access In This String? <input id="CharAtInput" type="number" placeholder="1,2,3...">
+            The Charecter Is : <mark id="CharAtOutput"></mark>
+            <pre>
+
+                document.getElementById('CharAtInput').oninput = function(){
+                    var CharAtInput = parseInt(document.getElementById('CharAtInput').value) - 1;
+                    var charAtExampleText = document.getElementById('CharAtExample').value;
+                    if(document.getElementById('CharAtInput').value == ""){
+                        document.getElementById('CharAtOutput').innerHTML = "";
+                }
+                else{
+                    document.getElementById('CharAtOutput').innerHTML = charAtExampleText.charAt(CharAtInput);
+                }
+                }
+                <code>JavaScript Counts position from 0,it means first letter is at index[0]</code>
+            </pre>
+            <hr>
+            The Text Is <input id="CharCodeAtExample" type="text" value="i am unchangeable :)" disabled>
+            <br>Which Number of Charecter You Want To Access In This String? <input id="CharCodeAtInput" type="number" placeholder="1,2,3...">
+            The Charecter Code Is : <mark id="CharCodeAtOutput"></mark>
+            <pre>
+
+                document.getElementById('CharCodeAtInput').oninput = function(){
+                    var CharCodeAtInput = parseInt(document.getElementById('CharCodeAtInput').value) - 1;
+                    var charCodeAtExampleText = document.getElementById('CharCodeAtExample').value;
+                    if(document.getElementById('CharCodeAtInput').value == ""){
+                        document.getElementById('CharCodeAtOutput').innerHTML = "";
+                }
+                else{
+                    document.getElementById('CharCodeAtOutput').innerHTML = charCodeAtExampleText.charCodeAt(CharCodeAtInput);
+                }
+                }
+                <mark>StringTextVariable.charCodeAt()</mark><code> Method Returns UTF-16 code of a Charecter at a Specified index in a String.</code>
+            </pre>
+            <hr>
+            The Text Is <input id="AtExample" type="text" value="i am unchangeable :)" disabled>
+            <br>Which Number of Charecter You Want To Access In This String? <input id="AtInput" type="number" placeholder="1,2,3...">
+            The Charecter Is : <mark id="AtOutput"></mark>
+            <pre>
+
+                document.getElementById('AtInput').oninput = function(){
+                    var AtExampleText = document.getElementById('AtExample').value;
+                    if(parseInt(document.getElementById('AtInput').value) >= 1){
+                    var AtInput = parseInt(document.getElementById('AtInput').value) - 1;
+                }
+                else if(parseInt(document.getElementById('AtInput').value) < 0){
+                    var AtInput = parseInt(document.getElementById('AtInput').value);
+                }
+                
+                else{}
+                    if(document.getElementById('AtInput').value == ""){
+                        document.getElementById('AtOutput').innerHTML = "";
+                    }
+                    else if(parseInt(document.getElementById('AtInput').value) == 0){
+                        document.getElementById('AtOutput').innerHTML = "";
+                    }
+                    else{
+                    document.getElementById('AtOutput').innerHTML = AtExampleText.at(AtInput);
+                    <span class="text-success">// This Will Also work same,</span>
+                    <span class="text-success">//document.getElementById('AtOutput').innerHTML = AtExampleText[AtInput];</span>
+                }
+                }
+                <mark>StringTextVariable.at()</mark><code> Method works same as <mark>charAt()</mark> but <mark>at()</mark>Supports Negative index to,when <mark>charAt()</mark> Doesn't</code> <br>
+                <code>Now You can use </code><mark>StringTextVariable.at(-2)</mark> instead of <mark>StringTextVariable.charAt(StringTextVariable.length - 2)</mark>
+            </pre>
+            <hr>
+            <h4>Using slice(start,end) : </h4>
+            <pre>
+
+                function SliceFunction(){
+                    var sliceInputText = "<input type="text" class="my-2 border-success rounded-2 bg-transparent" id="slice-input-text" placeholder="Enter String Here" oninput="SliceFunction()">";
+                                         <span class="text-success">//slice from : </span>
+                    var sliceInputNumberFrom = <input style="width: 90px;" type="number" class="border-success rounded-2 bg-transparent" id="slice-input-number-from" placeholder="1,2,3..">;
+                                         <span class="text-success">//To : </span>
+                    var sliceInputNumberTo = <input style="width: 90px;" type="number" class="border-success rounded-2 bg-transparent" id="slice-input-number-to" placeholder="2,3,4...">;
+                    var sliceOutput = document.getElementById('slice-output-text');
+                    sliceOutput.innerHTML = sliceInputText.slice(sliceInputNumberFrom,sliceInputNumberTo);
+                }
+                document.getElementById('slice-input-number-from').oninput = function(){
+                    SliceFunction();
+                }
+                document.getElementById('slice-input-number-to').oninput = function(){
+                    SliceFunction();
+                }
+
+                <code>Output(Sliced Part from String) : </code>
+                <mark id="slice-output-text"></mark>
+            </pre>
+            <hr>
+            If you omit second parameter,the method will slice out rest of the part,
+            <br>
+            i.e,
+            <pre>
+
+                let text = "Apple, Banana, Kiwi";
+                let part = text.slice(7)
+                document.getElementById("demo").innerHTML = part;
+
+                <code>Output:</code><mark>Banana, Kiwi</mark>
+            </pre>
+            <hr>
+            If a parameter is negative,
+            <pre>
+
+                let text = "Apple, Banana, Kiwi";
+                let part = text.slice(-12);
+                document.getElementById("demo").innerHTML = part;
+                <code>Output:</code><mark>Banana, Kiwi</mark>
+            </pre>
+            <hr>
+            If Both parameter is negative,
+            <pre>
+
+                let text = "Apple, Banana, Kiwi";
+                let part = text.slice(-12,-6)
+                document.getElementById("demo").innerHTML = part;
+                <code>Output:</code><mark>Banana</mark>
+                <span class="text-success">//Same this will not work : </span>
+                let text = "Apple, Banana, Kiwi";
+                let part = text.slice(-6,-12)
+                document.getElementById("demo").innerHTML = part;
+                <code>Output:</code><mark>""</mark>
+            </pre>
+            <hr>
+            <h3>substring()</h3> is similar to slice().
+<br><br>
+            The difference is that start and end values less than 0 are treated as 0 in substring().
+            <hr>
+            <h3>substr()</h3> is similar to slice().
+<br><br>
+The difference is that the second parameter specifies the length of the extracted part.
+<hr>    <h3>String.toUpperCase()</h3>
+
+            <pre>
+
+            <input class="input-normal-style" id="toUpperCaseInput" type="text" placeholder="Enter Text Here...">&nbsp;:&nbsp;<span id="toUpperCaseOutput"></span>
+            document.getElementById('toUpperCaseInput').oninput = function(){
+                document.getElementById('toUpperCaseOutput').innerHTML = this.value.toUpperCase();
+            }
+            </pre>
+            <hr>
+            <h3>String.toLowerCase()</h3>
+
+            <pre>
+
+            <input class="input-normal-style" id="toLowerCaseInput" type="text" placeholder="Enter Text Here...">&nbsp;:&nbsp;<span id="toLowerCaseOutput"></span>
+            document.getElementById('toLowerCaseInput').oninput = function(){
+                document.getElementById('toLowerCaseOutput').innerHTML = this.value.toLowerCase();
+            }
+            </pre>
+            <hr>
+            <h3>concat()</h3>
+            <pre>
+
+                <code>This Two Line Do The Same,</code>
+                text = "Hello" + " " + "World!";
+                text = "Hello".concat(" ", "World!");
+            </pre>
+            <hr>
+            <h3>trim()</h3>
+            <code>trim() Method removes all the white spaces from the string.</code>
+            <pre>
+
+                <input type="text" class="input-normal-style" id="trimInput" placeholder="Enter Text Here">
+                <span class="text-success mt-3">//With White Space : </span><mark id="trimOutputWithWhiteSpace"></mark>
+                <span class="text-success mt-3">//Without White Space : </span><mark id="trimOutputWithoutWhiteSpace"></mark>
+                document.getElementById('trimInput').oninput = function(){
+                    document.getElementById('trimOutputWithWhiteSpace').innerHTML = this.value.length;
+                    document.getElementById('trimOutputWithoutWhiteSpace').innerHTML = this.value.trim().length;
+                }
+            </pre>
+            <hr>
+            <h3>trimStart()</h3>
+            <code>Same as trim() but removes space from start only,</code>
+            <pre>
+
+                <input type="text" class="input-normal-style" id="trimStartInput" placeholder="Enter Text Here">
+                <span class="text-success mt-3">//With White Space : </span><mark id="trimStartOutputWithWhiteSpace"></mark>
+                <span class="text-success mt-3">//Without White Space : </span><mark id="trimStartOutputWithoutWhiteSpace"></mark>
+                document.getElementById('trimStartInput').oninput = function(){
+                    document.getElementById('trimStartOutputWithWhiteSpace').innerHTML = this.value.length;
+                    document.getElementById('trimStartOutputWithoutWhiteSpace').innerHTML = this.value.trimStart().length;
+                }
+            </pre>
+            <hr>
+            <h3>trimEnd()</h3>
+            <code>Same as trimStart() but removes space from End only,</code>
+            <pre>
+
+                <input type="text" class="input-normal-style" id="trimEndInput" placeholder="Enter Text Here">
+                <span class="text-success mt-3">//With White Space : </span><mark id="trimEndOutputWithWhiteSpace"></mark>
+                <span class="text-success mt-3">//Without White Space : </span><mark id="trimEndOutputWithoutWhiteSpace"></mark>
+                document.getElementById('trimEndInput').oninput = function(){
+                    document.getElementById('trimEndOutputWithWhiteSpace').innerHTML = this.value.length;
+                    document.getElementById('trimEndOutputWithoutWhiteSpace').innerHTML = this.value.trimEnd().length;
+                }
+            </pre>
+            <hr>
+            <h3>String Padding in JavaScript</h3>
+            <pre>
+                function StringPadingDunction(){
+                    var StringPading = "<input id="StringPading" class="input-normal-style" type="text" placeholder="Enter Here Text...!" oninput="StringPadingDunction()">";
+                    var padStartInput = <input type="number" id="padStartInput" class="input-normal-style" placeholder="length" style="width: 80px;">;
+                    var padStartInputStyle = "<input type="text" id="padStartInputStyle" class="input-normal-style" placeholder="style" style="width: 80px;">";
+                    document.getElementById('padStartOutput').innerHTML = <span class="visible-on-input">("</span><span id="strpdi">(StringPading.value).toString()</span><span class="visible-on-input">")</span>.padStart(<span id="padftg">padStartInput</span>,"<span id="pdastyl">padStartInputStyle</span>");
+                    document.getElementById('padEndOutput').innerHTML = <span class="visible-on-input">("</span><span id="strpdi1">(StringPading.value).toString()</span><span class="visible-on-input">")</span>.padEnd(<span id="padftg1">padStartInput</span>,"<span id="pdastyl1">padStartInputStyle</span>");
+                }
+                document.getElementById('padStartInput').oninput = function(){
+                    StringPadingDunction();
+                }
+                document.getElementById('padStartInputStyle').oninput = function(){
+                    StringPadingDunction();
+                }
+                <span class="text-success">// padStart()'s output : </span> <mark id="padStartOutput"></mark>
+                <span class="text-success">// padEnd()'s output : </span> <mark id="padEndOutput"></mark>
+            </pre>
+            <hr>
+            <h3>String Repeat</h3>
+            <pre>
+
+                document.getElementById('string-repeat-btn').onclick = function(){
+                    let StringRepeatText = "i Will repeat,";
+                    document.getElementById('string-repeat-output').innerHTML = StringRepeatText.repeat(3);
+                }
+
+                <button class="btn btn-danger my-2" id="string-repeat-btn">Click me</button>
+                <mark id="string-repeat-output">Here will be output</mark>
+            </pre>
+            <hr>
+            <h3>Replace </h3>
+            <pre>
+                <p id="replace">Please visit Microsoft and Microsoft!</p>
+                <p id="replace1">Please visit Microsoft and Microsoft!</p>
+                <p id="replace2">Please visit Microsoft and Microsoft!</p>
+                <button class="btn btn-info mt-2" onclick="ReplaceFunctionWithDefault()">Click me to replace</button>
+                <button class="btn btn-info mt-2" onclick="ReplaceFunction()">Click me to replace Using '/string/g'(global match)</button>
+                <button class="btn btn-info mt-2" onclick="ReplaceFunctionWithI()">Click me to replace Using '/string/i'(insensetive match)</button>
+
+                    function ReplaceFunctionWithDefault() {
+                    let text = document.getElementById("replace").innerHTML; 
+                    document.getElementById("replace").innerHTML =
+                    text.replace("Microsoft","W3Schools");
+                  }
+                
+                function ReplaceFunction() {
+                    let text = document.getElementById("replace1").innerHTML; 
+                    document.getElementById("replace1").innerHTML =
+                    text.replace(/Microsoft/g,"W3Schools");
+                  }
+                
+                  function ReplaceFunctionWithI() {
+                    let text = document.getElementById("replace2").innerHTML; 
+                    document.getElementById("replace2").innerHTML =
+                    text.replace(/MICROSOFT/i,"W3Schools");
+                  }
+                <span class="text-success">//instead of GlobalMatch /g u can use replaceAll() method,
+                <span class="text-success">//The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.</span>
+            </pre>
+            <hr>
+            <h3>String split()</h3>
+            <mark>a string can be converted into an array using <code>split().</code></mark>
+            <pre>
+
+                text.split(",")    <span class="text-success">// Split on commas</span>
+                text.split(" ")    <span class="text-success">// Split on spaces</span>
+                text.split("|")    <span class="text-success">// Split on pipe</span>
+
+                <code>If Separator is omitted ,the return array will contain whole string at index[0].</code>
+            </pre>
+            <hr>
+
+
+
+
+            <!-- String Search -->
+                   <h3>indexOf()</h3>
+                   <code>indexOf() Method returns First occurance of a string in a String or returns (-1) if the string is not found</code>
+
+                   <pre>
+
+                    <span>The position of the first occurrence of "locate" is:</span>
+                    <mark id="index-of-output"></mark>
+
+                    let text = "Please locate where 'locate' occurs!";
+                    let index = text.indexOf("locate");
+                    document.getElementById("index-of-output").innerHTML = index;
+                    <span class="text-success">//second parameter used as starting position for Search
+                    ex. let index = text.indexOf("locate",15);</span>
+                   </pre> 
+                   <hr>
+                   <h3>lastIndexOf()</h3>
+                   <code>same as IndexOf() Method but it counts from end of the string.</code>
+                   <pre>
+
+                    <span>The position of the last occurrence of "locate" is:</span>
+                    <mark id="last-index-of-output"></mark>
+
+                    let text = "Please locate where 'locate' occurs!";
+                    let index = text.lastIndexOf("locate");
+                    document.getElementById("index-of-output").innerHTML = index;
+                    <span class="text-success">//second parameter used as starting position for Search(from backwards)
+                    ex. let index = text.lastIndexOf("locate",15);</span>
+                   </pre> 
+                   <hr>
+                   <h3>search()</h3>
+                   <code>search is same as indexOf() Method There is some difference ,it will be covered later.</code>
+                   <hr>
+                   <h3>match()</h3>
+                   <code>match()</code> method returns array containing result of matching String,.
+                   <pre>
+                    
+                    let text = "The rain in SPAIN stays mainly in the plain";
+                    const myArr = text.match("ain");
+                    document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+                    <code>Output : </code><mark>1 ain</mark>
+                   </pre>
+                   <hr>
+                   <h3>match() with /g (GlobalMatch)</h3>
+                   <pre>
+                    
+                    let text = "The rain in SPAIN stays mainly in the plain";
+                    const myArr = text.match(/ain/g);
+                    document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+                    <code>Output : </code><mark>3 ain,ain,ain</mark>
+                   </pre>
+                   <hr>
+                   <h3>match() with /gi (GlobalMatch + Insensitive text)</h3>
+                   <pre>
+                    
+                    let text = "The rain in SPAIN stays mainly in the plain";
+                    const myArr = text.match(/ain/gi);
+                    document.getElementById("demo").innerHTML = myArr.length + " " + myArr;
+                    <code>Output : </code><mark>4 ain,AIN,ain,ain</mark>
+                   </pre>
+                   <hr>
+                   <h3>matchAll()</h3>
+                   <code>matchAll()</code> Returns an iterator containing the result of matching String Against a string.
+                   <hr>
+                   <h3>includes()</h3>
+                   <code>includes()</code> Methos returns true or false if string contains specified value or not.
+                   <pre>
+
+                    let text = "Hello world, welcome to the universe.";
+                    document.getElementById("demo").innerHTML = text.includes("world");
+                    <code>Output : </code><mark>true</mark>
+
+                    <span class="text-success">//includes() has second position also,describing starting point.</span>
+                    let text = "Hello world, welcome to the universe.";
+                    document.getElementById("demo").innerHTML = text.includes("world", 12);
+                    <code>Output : </code><mark>false</mark>
+                   </pre>
+                   <hr>
+                   <h3>startsWith()</h3>
+                   Returns True or false,
+                   <pre>
+
+                    let text = "Hello world, welcome to the universe.";
+                    document.getElementById("demo").innerHTML = text.startsWith("Hello");
+                    <code>output : </code><mark>true</mark>
+
+                    let text = "Hello world, welcome to the universe.";
+                    document.getElementById("demo").innerHTML = text.startsWith("world", 5);
+                    <code>output : </code><mark>false</mark>
+                   </pre> 
+                   <hr>
+                   <h3>endsWith()</h3>
+                   <pre>
+
+                    let text = "John Doe";
+                    document.getElementById("demo").innerHTML = text.endsWith("Doe");
+                    <code>output : </code><mark>true</mark>
+
+                    let text = "Hello world, welcome to the universe.";
+                    document.getElementById("demo").innerHTML = text.endsWith("world", 11);
+                    <code>output : </code><mark>true</mark>
+                   </pre>
+                   <hr>
+                   <h3>Template string</h3>
+                <ul>
+                    <li>
+                        <code>Template String</code> use <mark><code>`back-ticks`</code></mark>rather than <mark><code>"double quotes"</code></mark> or <mark><code>'quotes'</code></mark>
+                    </li>
+                    <li><code>Template String</code> Allows Both inside<mark><code>`<mark><code> "double quotes"</code></mark> and <mark><code>'quotes' </code></mark>`</code></mark></li>
+                    <li>Template String allows variable in strings,Ex.</li>
+                    <pre>
+
+                        let firstName = "John";
+                        let lastName = "Doe";
+                        let text = `Welcome ${firstName}, ${lastName}!`;
+                        <code>Output : </code><mark>Welcome John, Doe!</mark>
+                    </pre>
+                </ul>
+                <hr>
+            <!-- Numbers -->
+            <h3>Numbers : </h3>
+            <pre>
+
+                let x = 3;                    <span class="text-success">//Without Decimal</span>
+                let x = 3.14                  <span class="text-success">//With Decimal</span>
+                let x = 123e5;                <span class="text-success">// 12300000</span>
+                let y = 123e-5;               <span class="text-success">// 0.00123</span>
+                let x = 999999999999999;      <span class="text-success">// x will be 999999999999999</span>
+                let y = 9999999999999999;     <span class="text-success">// y will be 10000000000000000</span>
+                <code>JavaScript Integers are Accurate upto 15 Numbers.</code>
+                <code>Maximum Number of Decimal is 17.</code>
+                let x = 0.2 + 0.1;            <span class="text-success">//= 0.30000000000000004</span>
+                <code>to Solve this Float Eq. Problem Multiply and devide,</code>
+                let y = (0.2*10 + 0.1*10)/10; <span class="text-success">//= 0.3</span>
+
+                let x = 10;
+                let y = 20;
+                let z = x + y;                <span class="text-success">//= 30</span>
+
+                let x = "10";
+                let y = "20";
+                let z = x + y;                <span class="text-success">//= "1020"</span>
+
+                let x = 10;
+                let y = "20";                 
+                let z = x + y;                <span class="text-success">//= "1020"</span>
+                
+                let x = "10";
+                let y = 20;
+                let z = x + y;                <span class="text-success">//= "1020"</span>
+
+                let x = 10;
+                let y = 20;
+                let z = "The result is: " + x + y;
+                                              <span class="text-success">//= "The Result is: 1020"</span>
+                                              <code>JavaScript Goes Left To Right When Calculations.</code>
+
+                let x = 10;
+                let y = 20;
+                let z = "30";
+                let result = x + y + z;      <span class="text-success">//= 3030</span>
+
+                let x = 100;                 <span class="text-success">// x is a number</span>
+                let y = "100";               <span class="text-success">// y is a string</span>
+
+                let x = "100";
+                let y = "10";
+                let z = x / y;               <span class="text-success">//= 10</span>
+
+                let x = "100";
+                let y = "10";
+                let z = x * y;               <span class="text-success">//= 1000</span>
+
+                let x = "100";
+                let y = "10";
+                let z = x - y;               <span class="text-success">//= 90</span>
+
+                let x = "100";
+                let y = "10";
+                let z = x + y;               <span class="text-success">//= "10010"</span>
+                                             <code>'+' used for string concatenate and adding numbers both,</code>
+
+                let x = 100 / "Apple";
+                isNaN(x);                    <span class="text-success">//= true</span>
+
+                let y = new Number(123);     <span class="text-success">//Creating Numbers as Object</span>
+
+                let x = new Number(500);
+                let y = new Number(500);
+                x==y?                        <span class="text-success">//false! always comparing object with object will return value false,
+                                              //JavaScript Object Can Not be compared</span>
+
+            </pre>
+            <hr>
+            <!-- BigInt -->
+             <h3>BigInt</h3>
+             <pre>
+
+                <code>JavaScript integers are only accurate up to 15 digits</code>
+                From <mark>9007199254740991 / +(2<span class="square-css">53</span>-1)</mark> To <mark>-9007199254740991 / -(2<span class="square-css">53</span>-1)</mark>,
+                Inside This JavaScript Can safely represent Integers,
+                outside this JavaScript lose precision.
+
+                <code>There is 2 way to Create BigInt,</code>
+                let y = 9999999999999999n;                    <span class="text-success">1. Append 'n' at the end of the integer</span> 
+                let y = BigInt(1234567890123456789012345);    <span class="text-success">2. Use BigInt();</span>
+
+                <code>BigInt can not have decimals</code>
+                let x = 5n;
+                let y = x/2;
+                <span class="text-success">//Error : Cannot mix BigInt and other types, use explicit conversion.</span>
+
+                let x = 5n;
+                let y = Number(x) / 2;                        <span class="text-success">//= 2.5</span>
+
+                let x = Number.MAX_SAFE_INTEGER;              <span class="text-success">//=9007199254740991</span>
+                let y = Number.MIN_SAFE_INTEGER;              <span class="text-success">//=(-9007199254740991)</span>
+
+                Number.isInteger(10);                         <span class="text-success">//= true</span>
+                Number.isInteger(10.5);                       <span class="text-success">//= false</span>
+
+                Number.isSafeInteger(10);                     <span class="text-success">//= true</span>
+                Number.isSafeInteger(12345678901234567890);   <span class="text-success">//= false</span>                
+             </pre>
+             <hr>
+            <!-- Number Methods -->
+             <h3>toStrings()</h3>
+             <code>Returns Number as a String</code>
+             <pre>
+
+                let x = 23;
+                x.toString();
+                typeof x;   <span class="text-success">//= string</span>
+             </pre>
+             <hr>
+             <h3>toExponential()</h3>
+             <code>returns string with a number rounded and written using exponential Notation.</code>
+             <pre>
+
+                let x = 9.656;  
+                x.toExponential();         <span class="text-success">//= 9.656e+0</span>
+                x.toExponential(2);        <span class="text-success">//= 9.66+e0</span>
+                x.toExponential(4);        <span class="text-success">//= 9.6560e+0</span>
+                x.toExponential(6);        <span class="text-success">//= 9.656000e+0</span>
+             </pre>
+             <hr>
+             <h3>toFixed()</h3>
+             <code>The toFixed() method rounds a number to a given number of digits.</code>
+             <pre>
+
+                let x = 9.656;
+                x.toFixed(0);              <span class="text-success">//= 10</span>
+                x.toFixed(2);              <span class="text-success">//= 9.66</span>
+                x.toFixed(4);              <span class="text-success">//= 9.6560</span>
+                x.toFixed(6);              <span class="text-success">//= 9.656000</span>
+
+                <mark><code>var.toFixed(2);</code> is Perfect for working with Money</mark>
+             </pre>
+             <hr>
+             <h3>toPrecision()</h3>
+             <code>toPrecision() returns a string, with a number written with a specified length:</code>
+             <pre>
+
+                let x = 9.656;             
+                x.toPrecision();           <span class="text-success">//= 9.656</span>
+                x.toPrecision(2);          <span class="text-success">//= 9.7</span>
+                x.toPrecision(4);          <span class="text-success">//= 9.656</span>
+                x.toPrecision(6);          <span class="text-success">//= 9.65600</span>
+             </pre>
+             <hr>
+             <h3>valueOf()</h3>
+             <code>valueOf() Method Returns Number as a Number.</code>
+             <pre>
+
+                let x = 123;               
+                x.valueOf();               <span class="text-success">//= 123</span>
+                (123).valueOf();           <span class="text-success">//= 123</span>
+                (100 + 23).valueOf();      <span class="text-success">//= 123</span>
+             </pre>
+             <hr>
+             <h3>Number()</h3>
+             <code>Number()</code> Method Converts variable into Numbers,
+             <pre>
+
+                Number(true);                   <span class="text-success">//= 1</span>
+                Number(false);                  <span class="text-success">//= 0</span>
+                Number("10");                   <span class="text-success">//= 10</span>
+                Number("  10");                 <span class="text-success">//= 10</span>
+                Number("10  ");                 <span class="text-success">//= 10</span>
+                Number(" 10  ");                <span class="text-success">//= 10</span>
+                Number("10.33");                <span class="text-success">//= 10.33</span>
+                Number("10,33");                <span class="text-success">//= NaN</span>
+                Number("10 33");                <span class="text-success">//= NaN</span>
+                Number("John");                 <span class="text-success">//= NaN</span>
+             
+
+             <mark><code>Number(Date());</code>(Number() On Date()) Method Returns Number of miliseconds from 1970-01-01</mark> 
+             Number(Date("1970-01-01"));        <span class="text-success">//= 0</span>
+             Number(Date("1970-01-02"));        <span class="text-success">//= 86400000</span>
+            </pre>
+            <hr>
+            <h3>parseInt()</h3>
+            <code>parseInt</code> parses a String and returns a Number.
+            <pre>
+
+            parseInt("-10");                     <span class="text-success">//= -10</span>   
+            parseInt("-10.33");                  <span class="text-success">//= -10</span>
+            parseInt("10");                      <span class="text-success">//= 10</span>
+            parseInt("10.33");                   <span class="text-success">//= 10</span>
+            parseInt("10 20 30");                <span class="text-success">//= 10</span>
+            parseInt("10 years");                <span class="text-success">//= 10</span>
+            parseInt("years 10");                <span class="text-success">//= NaN</span>
+        </pre>
+        <hr>
+        <h3>parseFloat()</h3>
+        Same <code>parseFloat()</code> Method Returns Float converted from String.
+        <pre>
+
+            parseFloat("10");                   <span class="text-success">//= 10</span>  
+            parseFloat("10.33");                <span class="text-success">//= 10.33</span>  
+            parseFloat("10 20 30");             <span class="text-success">//= 10</span>  
+            parseFloat("10 years");             <span class="text-success">//= 10</span>  
+            parseFloat("years 10");             <span class="text-success">//= NaN</span>  
+        </pre>
+        <hr>
+        <h3>Number.isInteger()</h3>
+        <pre>
+
+            <mark>Number Methods Cannot be Used on Variables</mark>
+            x.isInteger(); Will Result in Error.
+
+            Number.isInteger(10);               <span class="text-success">//= true</span>  
+            Number.isInteger(10.5);             <span class="text-success">//= false</span>  
+        </pre>
+        <hr>
+        <h3>Number.isSafeInteger()</h3>
+        <pre>
+
+            Number.isSafeInteger(10);                       <span class="text-success">//= true</span>
+            Number.isSafeInteger(12345678901234567890);     <span class="text-success">//= false</span>
+        </pre>
+        <hr>
+        <h3>Number.parseInt & Number.parseFloat</h3>
+        <pre>
+
+            <code>Number.parseInt & Number.parseFloat are same.</code>
+        </pre>
+        <hr>
+        
+            <!-- Number Properties -->
+            <h3>Number Properties</h3>
+            <pre>
+
+                <code>The difference between 1 and the smallest floating point number greater than 1:</code>
+                let x = Number.EPSILON;                             <span class="text-success">//= 2.220446049250313e-16</span>
+                <code>The largest possible number in JavaScript:</code>
+                let x = Number.MAX_VALUE;                           <span class="text-success">//= 1.7976931348623157e+308</span>
+                <code>The smallest number possible in JavaScript :</code>
+                let x = Number.MIN_VALUE;                           <span class="text-success">//= 5e-324</span>
+                <code>The maximum safe integer in JavaScript :</code>
+                let x = Number.MAX_SAFE_INTEGER;                    <span class="text-success">//= 9007199254740991</span>
+                <code>The minimum safe integer in JavaScript :</code>
+                let x = Number.MIN_SAFE_INTEGER;                    <span class="text-success">//= -9007199254740991</span>
+                <code>The POSITIVE_INFINITY Property :</code>
+                let x = Number.POSITIVE_INFINITY;                   <span class="text-success">//= Infinity</span>
+                <code>The NEGATIVE_INFINITY Property :</code>
+                let x = Number.NEGATIVE_INFINITY;                   <span class="text-success">//= -Infinity</span>
+                <code>NaN :</code>
+                let x = Number.NaN;                                 <span class="text-success">//= NaN</span>
+            </pre>     
+            <hr>
+            <!-- Arrays -->
+             <h3>Arrays : </h3>
+            <pre>
+
+                const carArrayExample = [];      <span class="text-success">//Create empty Array</span>
+                carArrayExample[0] = "BMW";      
+                carArrayExample[1] = 'red';      
+                carArrayExample[2] = '2012';     
+                <span class="text-success">//Now Array will have this much elements,</span>
+                <button id="ArrayExample1" class="btn btn-outline-danger">Click me to see added elements</button>
+                const carArrayExample = ["<span id="ArrayExampleItems"></span>"];
+
+                <span class="text-success">//You can also create Array Like this,
+                //const cars = new Array("Saab", "Volvo", "BMW");
+                //its do the same,but slows down the code better do not use</span>
+            </pre>
+            <code>Array Indexes Starts with 0,[0] is First Element,[1] Is Second Element.</code>
+            
+            <pre>
+
+                <span class="text-success">//Changing an Array Element</span>
+                const cars = ["Saab", "Volvo", "BMW"];
+                cars[0] = "Opel";
+                <button id="ArrayExample2" class="btn btn-outline-light">Click Me to See</button>
+                const cars = ["<span id="ArrayExampleOutput2">Saab</span>", "Volvo", "BMW"];
+            </pre>
+            <code>toString()</code> Converts Array To String()
+            <pre>
+
+                document.getElementById('ArrayExample3').onclick = function(){
+                const fruitsArrayExample = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("ArrayExample3Output").innerHTML = fruitsArrayExample.toString();
+                }
+                <button class="btn btn-outline-info" id="ArrayExample3">Click Me To See</button>
+                <mark id="ArrayExample3Output"></mark>
+            </pre>
+            Array Are Objects,<code>typeof</code> of operator in JavaScript returns "object" for Arrays.
+            <pre>
+
+                const person = ["John", "Doe", 46];                             <span class="text-success">//Array</span>
+                const person = {firstName:"John", lastName:"Doe", age:46};      <span class="text-success">//Objects</span>
+                <span class="text-success">//Object Uses String as a Name to access its Members.</span>
+                <span class="text-success">//ex.person.firstName returns John</span>
+            </pre>
+            Array Length
+            <pre>
+
+                let x = ["ansh","a","parmar"];
+                let y = x.length;     <span class="text-success">//will reutrn 3;</span>
+
+                <mark>The <code>length</code> property is always one more than the highest array index.</mark>
+
+                let c = x[0];                 <span class="text-success">//First Array Element</span>
+                let d = x[x.length - 1];      <span class="text-success">//last Array Element</span>
+            </pre>
+            Looping Array elements,
+            <pre>
+
+                document.getElementById('LoopingArrayInput').onclick = function(){
+                    const fruitsZ = ["Banana", "Orange", "Apple", "Mango"];
+                    let fLen = fruitsZ.length;
+                    
+                    let text = "&#60;ul&#62;";
+                    for (let i = 0; i &#60; fLen; i++) {
+                      text += "&#60;li&#62;" + fruitsZ[i] + "&#60;/li&#62;";
+                    }
+                    text += "&#60;/ul&#62;";
+                    document.getElementById('LoopingArrayOutput').innerHTML = text;
+                    }
+                <button id="LoopingArrayInput" class="btn btn-outline-warning">Click To See Me </button>
+                <p id="LoopingArrayOutput"></p>
+                <span class="text-success">//You Can Also Use <code>Array.forEach() function</code></span>
+                <span class="text-success">/* const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+                let text = "&#60;ul&#62;";
+                fruits.forEach(myFunction);
+                text += "&#60;/ul&#62;";
+
+                function myFunction(value) {
+                ext += "&#60;li&#62;" + value + "&#60;/li&#62;";
+                } */</span> 
+            </pre>
+            Adding Array Elements,
+            <pre>
+
+                <span class="text-success">//The easiest way to add a new element to an array is using the <code>push()</code> method:</span>
+                const fruitsArrayPushExample = ["Banana", "Orange", "Apple"];
+                document.getElementById('fruitsArrayPushExampleButton').onclick = function(){
+                fruitsArrayPushExample.push("Lemon");
+                document.getElementById('fruitsArrayPushExampleOutput').innerHTML = fruitsArrayPushExample;
+                }    
+
+                <button class="btn btn-outline-danger" id="fruitsArrayPushExampleButton">Click To See Me</button>
+                
+                const fruitsArrayPushExample = ["<span id="fruitsArrayPushExampleOutput">Banana,Orange,Apple</span>"];
+
+                <mark>New element can also be added to an array using the <code>length</code> property:</mark>
+                const fruitsArrayPushExample = ["Banana", "Orange", "Apple"];
+                document.getElementById('fruitsArrayPushExampleButton2').onclick = function(){
+                fruitsArrayPushExample[fruitsArrayPushExample.length] = "Lemon";
+                document.getElementById('fruitsArrayPushExampleOutput2').innerHTML = fruitsArrayPushExample;
+                }
+
+                <button class="btn btn-outline-light" id="fruitsArrayPushExampleButton2">Click To See Me</button>
+                
+                const fruitsArrayPushExample = ["<span id="fruitsArrayPushExampleOutput2">Banana,Orange,Apple</span>"];
+            </pre>
+            <mark>Adding elements with high indexes can create undefined "holes" in an array:</mark>
+            <pre>
+
+                const fruits = ["Banana", "Orange", "Apple"];
+                fruits[6] = "Lemon";
+
+                let fLen = fruits.length;
+                let text = "";
+                for (i = 0; i < fLen; i++) {
+                text += fruits[i] + "&#60;br&#62;";
+                }
+
+                document.getElementById("demo").innerHTML = text;
+
+               <span class="text-success">/* <mark><code>Output: </code></mark>
+                Banana
+                Orange
+                Apple
+                undefined
+                undefined
+                undefined
+                Lemon */
+            </span>
+            </pre>
+            <mark><code>If you use named indexes, JavaScript will redefine the array to an object.
+                <br>
+                After that, some array methods and properties will produce incorrect results.</code></mark>
+                <pre>
+
+                    <span class="text-success">//In JavaScript Arrays Use Numbered Indexes,
+                    //  Objects Use named Indexes
+
+                    //JavaScript have built in Array Constructor: <code>new Array()</code>
+                    //But You Can Safely Use <code>[]</code>
+                </span>
+
+                    <code>This Are Same</code>
+                    const points = new Array(40, 100, 1, 5, 25, 10);
+                    const points = [40, 100, 1, 5, 25, 10]; 
+
+                    <span class="text-success">// Create an array with two elements:</span>
+                    const points = new Array(40, 100, 1);
+
+                    <span class="text-success">// Create an array with one element???</span>
+                    const points = new Array(40);           <span class="text-success">output : ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, </span>
+
+                    <span class="text-success">// Create an array with one element:</span>
+                    const points = [40];
+
+                    <span class="text-success">// Create an array with 40 undefined elements:</span>
+                    const points = new Array(40); 
+                </pre>
+                How To Recognize an Array?
+                <pre>
+
+                    <mark><code>The problem is that the JavaScript operator typeof returns "object"</code></mark>
+                    <span class="text-success">// It's Because JavaScript Array Is An Object</span>
+
+                    Solution : 1,
+                    Array.isArray(fruits);          <span class="text-success">//returns true if it is array</span>
+
+                    Solution : 2,
+                    const fruits = ["Banana", "Orange", "Apple"];
+                    fruits instanceof Array;        <span class="text-success">//instanceof operator returns true if an object is created by a given constructors</span>
+                </pre>
+                <hr>
+                <pre>
+
+                    <textarea type="text" id="ArrayChap1Example" class="input-normal-style" placeholder="Add Values here..."></textarea>
+                    <button id="ArrayChap1ExampleButton" class="btn btn-secondary rounded-0 my-2" onclick="ArrayElementAddFunction()" disabled>Enter The Value</button>
+                    <div id="ArrayChap1ExampleOutput"></div>
+                </pre>
+                <hr>
+                <h3>Array Methods</h3>
+                <pre>
+
+                    <mark><code>length</code> Property returns the length of an array</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    let size = fruits.length;                                       <span class="text-success">//will Return 4</span>
+
+                    <mark><code>toString()</code> converts an array to a string of (comma separated) array values.</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo").innerHTML = fruits.toString();  <span class="text-success">//Will Return 'Banana,Orange,Apple,Mango'</span>
+
+                    <mark><code>at()</code> is same as [],</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    let fruit = fruits.at(2);                                       <span class="text-success">//Will Return Apple</span>
+                    let fruit = fruits[2];                                          <span class="text-success">//Will Return Apple</span>
+                    
+                    <mark>The <code>join()</code> method also joins all array elements into a string,</mark>
+                    <mark>It behaves just like <code>toString()</code>, but in addition you can specify the separator:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo").innerHTML = fruits.join(" * "); <span class="text-success">//Banana * Orange * Apple * Mango</span>
+
+                    <mark>The <code>pop()</code> method removes the last element from an array:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.pop();
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple</span>
+
+                    <mark>The <code>push()</code> method adds a new element to an array (at the end):</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.push("Kiwi");
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango,Kiwi</span>
+                    
+                    <mark>The <code>push()</code> method returns the new array length:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits.push("Kiwi");<span class="text-success">//5</span>
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango,Kiwi</span>
+
+                    <mark>The <code>shift()</code> method removes the first array element and "shifts" all other elements to a lower index.</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.shift();
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Orange,Apple,Mango</span>
+
+                    <mark>The <code>shift()</code> method returns the value that was "shifted out":</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits.shift();    <span class="text-success">//Banana</span>
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Orange,Apple,Mango</span>
+
+                    <mark><code>Unshift()</code>unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.unshift("Lemon");
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Lemon,Banana,Orange,Apple,Mango</span>
+
+                    <mark><code>unshift()</code> method returns the new array length:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits.unshift("Lemon");   <span class="text-success">//5</span>
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Lemon,Banana,Orange,Apple,Mango</span>
+
+                    <mark><code>length</code> property provides an easy way to append a new element to an array:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits[fruits.length] = "Kiwi";
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango,Kiwi</span>
+
+                    <mark>Using <code>delete()</code> leaves undefined holes in the array.</mark>
+                    (use <code>pop()</code> or <code>shift()</code> Instead.)
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML =
+                    "The first fruit is: " + fruits[0];                             <span class="text-success">//Banana</span>
+                    delete fruits[0];
+                    document.getElementById("demo2").innerHTML =
+                    "The first fruit is: " + fruits[0];                             <span class="text-success">//Undefined</span>
+                    
+                    <mark><code>concat()</code> method creates a new array by merging (concatenating) existing arrays:</mark>
+                    const myGirls = ["Cecilie", "Lone"];
+                    const myBoys = ["Emil", "Tobias", "Linus"];
+                    const myChildren = myGirls.concat(myBoys);
+                    document.getElementById("demo").innerHTML = myChildren;         <span class="text-success">//Cecilie,Lone,Emil,Tobias,Linus</span>
+
+                    <mark><code>concat() </code>method can take any number of array arguments.</mark>
+                    const array1 = ["Cecilie", "Lone"];
+                    const array2 = ["Emil", "Tobias", "Linus"];
+                    const array3 = ["Robin", "Morgan"];
+                    const myChildren = array1.concat(array2, array3); 
+                    document.getElementById("demo").innerHTML = myChildren;         <span class="text-success">//Cecilie,Lone,Emil,Tobias,Linus,Robin,Morgan</span>
+
+                    <mark><code>concat() </code>method can also take strings as arguments:</mark>
+                    const myArray = ["Emil", "Tobias", "Linus"];
+                    const myChildren = myArray.concat("Peter"); 
+                    document.getElementById("demo").innerHTML = myChildren;         <span class="text-success">//Emil,Tobias,Linus,Peter</span>
+
+                    <mark><code>copyWithin() </code>method copies array elements to another position in an array:</mark>
+                    (Copy to index 2, all elements from index 0:)
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo").innerHTML = fruits.copyWithin(2,0);   <span class="text-success">//Banana,Orange,Banana,Orange</span>
+
+                    (Copy to index 2, the elements from index 0 to 2:)
+                    const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
+                    document.getElementById("demo").innerHTML = fruits.copyWithin(2,0,2);    <span class="text-success">//Banana,Orange,Banana,Orange,Kiwi,Papaya</span>
+
+                    <mark><code>flat() </code>method creates a new array with sub-array elements concatenated to a specified depth.</mark>
+                    const myArr = [[1,2],[3,4],[5,6]];
+                    const newArr = myArr.flat();
+                    document.getElementById("demo").innerHTML = newArr;             <span class="text-success">//1,2,3,4,5,6</span>
+
+                    <mark><code>splice()</code> method can be used to add new items to an array:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+
+                    fruits.splice(2, 0, "Lemon", "Kiwi");
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Lemon,Kiwi,Apple,Mango</span>
+                    (The first parameter (2) defines the position where new elements should be added (spliced in).
+
+                    The second parameter (0) defines how many elements should be removed.
+                    
+                    The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.)
+
+                    <mark><code>splice()</code> method returns an array with the deleted items:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = "Original Array: " + fruits;           <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    let removed = fruits.splice(2, 2, "Lemon", "Kiwi"); 
+                    document.getElementById("demo2").innerHTML = "New Array: " + fruits;                 <span class="text-success">//Banana,Orange,Lemon,Kiwi</span>
+                    document.getElementById("demo3").innerHTML = "Removed Items: " + removed;           <span class="text-success">//Apple,Mango</span>
+
+                    <mark>With clever parameter setting, you can use <code>splice()</code> to remove elements without leaving "holes" in the array:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.splice(0, 1);
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Orange,Apple,Mango</span>
+                    (The first parameter (0) defines the position where new elements should be added (spliced in).
+
+                    The second parameter (1) defines how many elements should be removed.
+                    
+                    The rest of the parameters are omitted. No new elements will be added.)
+
+                    <mark>The difference between the new <code>toSpliced()</code> method and the old <code>splice()</code> method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.</mark>
+                    const months = ["Jan", "Feb", "Mar", "Apr"];
+                    const spliced = months.toSpliced(0, 1);
+                    document.getElementById("demo").innerHTML = spliced;            <span class="text-success">//Feb,Mar,Apr</span>
+
+                    <Code>NOTE : </Code>The slice() method creates a new array.
+                    The slice() method does not remove any elements from the source array.
+
+                    <mark>Slice out a part of an array starting from array element 3 ("Apple"):</mark>
+                    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                    const citrus = fruits.slice(3);                                 <span class="text-success">//Apple,Mango</span>
+
+                    <mark>The <code>slice()</code> method can take two arguments like <code>slice(1, 3)</code>.</mark>
+                    (The method then selects elements from the start argument, and up to (but not including) the end argument.)
+                    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                    const citrus = fruits.slice(1,3);                               <span class="text-success">//Orange,Lemon</span>
+
+                    <mark>If the end argument is omitted, like in the first examples, the <code>slice()</code> method slices out the rest of the array</mark>
+                    const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                    const citrus = fruits.slice(2);                                 <span class="text-success">//Lemon,Apple,Mango</span>
+
+                    <mark>Automatic <code>toString()</code></mark>
+                    (JavaScript automatically converts an array to a comma separated string when a primitive value is expected.
+                    This is always the case when you try to output an array.
+                    These two examples will produce the same result:)
+
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo").innerHTML = fruits.toString();  <span class="text-success">//Banana,Orange,Apple,Mango</span>
+
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo").innerHTML = fruits;             <span class="text-success">//Banana,Orange,Apple,Mango</span>
+
+                    <code>All JavaScript objects have a toString() method.</code>
+                </pre>
+                <hr>
+                <h3>Array Search</h3>
+                <pre>
+
+                    <mark>The <code>indexOf()</code> method searches an array for an element value and returns its position.</mark>
+                    const fruits = ["Apple", "Orange", "Apple", "Mango"];
+                    let position = fruits.indexOf("Apple");                         <span class="text-success">//0</span>
+
+                    Syntax,
+                    <code>array.indexOf(item, start)</code>
+                    item : Required. The item to search for.
+                    start : Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.
+
+                    - <code>Array.indexOf()</code> returns -1 if the item is not found
+                    - If the item is present more than once, it returns the position of the first occurrence.
+
+                    <mark><code>Array.lastIndexOf()</code> is the same as <code>Array.indexOf()</code>, but returns the position of the last occurrence of the specified element.</mark>
+                    const fruits = ["Apple", "Orange", "Apple", "Apple", "Mango"];
+                    let position = fruits.lastIndexOf("Apple");                     <span class="text-success">//3</span>
+
+                    Syntax,
+                    <code>array.lastIndexOf(item, start)</code>
+                    item : Required. The item to search for
+                    start : Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning
+
+                    <mark><code>Array.includes()</code> to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf)</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    fruits.includes("Mango");                                       <span class="text-success">// is true</span>
+
+                    <code>NOTE : </code>Array.includes() allows to check for NaN values. Unlike Array.indexOf().
+
+                    <mark><code>find()</code> method returns the value of the first array element that passes a test function.</mark>
+                    const numbers = [4, 9, 16, 25, 29];
+                    let first = numbers.find(myFunction);
+                    document.getElementById("demo").innerHTML = "First number over 18 is " + first;         <span class="text-success">//25</span>
+                    function myFunction(value, index, array) {
+                    return value > 18;
+                    }
+
+                    <code>NOTE : </code>that the function takes 3 arguments:
+                    - The item value
+                    - The item index
+                    - The array itself
+
+                    <mark>The <code>findIndex()</code> method returns the index of the first array element that passes a test function.</mark>
+                    This example finds the index of the first element that is larger than 18:
+                    const numbers = [4, 9, 16, 25, 29];
+                    document.getElementById("demo").innerHTML = "First number over 18 has index " + numbers.findIndex(myFunction);      <span class="text-success">//3</span>
+                    function myFunction(value, index, array) {
+                      return value > 18;
+                    }
+
+                    <code>NOTE : </code>that the function takes 3 arguments:
+                    - The item value
+                    - The item index
+                    - The array itself
+
+                    <mark><code>findLast()</code> method that will start from the end of an array and return the value of the first element that satisfies a condition.</mark>
+                    const temp = [27, 28, 30, 40, 42, 35, 30];
+                    let high = temp.findLast(x => x > 40);
+                    document.getElementById("demo").innerHTML = "The last temperature over 40 was " + high;         <span class="text-success">//42</span>
+
+                    <mark><code>findLastIndex()</code> method finds the index of the last element that satisfies a condition.</mark>
+                    const temp = [27, 28, 30, 40, 42, 35, 30];
+                    let pos = temp.findLastIndex(x => x > 40);
+                    document.getElementById("demo").innerHTML = "The last temperature over 40 was in position " + pos;  <span class="text-success">//4</span>
+                </pre>
+                <hr>
+                <h3>Array Sort</h3>
+                <pre>
+
+                    <mark>The <code>sort()</code> method sorts an array alphabetically:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.sort();
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Apple,Banana,Mango,Orange</span>
+
+                    <mark>The <code>reverse()</code> method reverses the elements in an array:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.reverse();
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Mango,Apple,Orange,Banana</span>
+
+                    <mark>By combining <code>sort()</code> and <code>reverse()</code>, you can sort an array in descending order:</mark>
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    document.getElementById("demo1").innerHTML = fruits;            <span class="text-success">//Banana,Orange,Apple,Mango</span>
+                    fruits.sort();
+                    fruits.reverse();
+                    document.getElementById("demo2").innerHTML = fruits;            <span class="text-success">//Orange,Mango,Banana,Apple</span>
+
+                    <mark>The difference between <code>toSorted()</code> and <code>sort()</code> is that the first method creates a new array, keeping the original array unchanged, while second method alters the original array.</mark>
+                    const months = ["Jan", "Feb", "Mar", "Apr"];
+                    const sorted = months.toSorted();
+                    document.getElementById("demo").innerHTML = sorted;             <span class="text-success">//Apr,Feb,Jan,Mar</span>
+
+                    <mark>The difference between <code>toReversed()</code> and <code>reverse()</code> is that the first method creates a new array, keeping the original array unchanged, while second method alters the original array</mark>
+                    const months = ["Jan", "Feb", "Mar", "Apr"];
+                    const reversed = months.toReversed();
+                    document.getElementById("demo").innerHTML = reversed;           <span class="text-success">//Apr,Mar,Feb,Jan</span>
+                </pre>
+                <h3>Array Numeric Sort</h3>
+                <pre>
+
+                    <span class="text-success">//By default, the <code>sort()</code> function sorts values as strings.</span>
+
+                    <span class="text-success">//This works well for strings <code>("Apple" comes before "Banana")</code>.</span>
+
+                    <span class="text-success">//If numbers are sorted as strings, <code>"25"</code> is bigger than <code>"100"</code>, because <code>"2"</code> is bigger than <code>"1"</code>.</span>
+
+                    <span class="text-success">//Because of this, the <code>sort()</code> method will produce incorrect result when sorting numbers.</span>
+
+                    <span class="text-success">//You can fix this by providing a <mark><code>'compare function'</code></mark>:</span>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo1").innerHTML = points;                <span class="text-success">//40,100,1,5,25,10</span>
+                    points.sort(function(a, b){return a - b});
+                    document.getElementById("demo2").innerHTML = points;                <span class="text-success">//1,5,10,25,40,100</span>
+
+                    <mark>Use the same trick to sort an array descending:</mark>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo1").innerHTML = points;                <span class="text-success">//40,100,1,5,25,10</span>
+                    points.sort(function(a, b){return b - a});
+                    document.getElementById("demo2").innerHTML = points;                <span class="text-success">//100,40,25,10,5,1</span>
+                </pre>
+                <h3>The Compare Function</h3>
+                <code>The purpose of the compare function is to define an alternative sort order.</code>
+                <pre>
+
+                    function(a, b){return a - b}
+
+                    <span class="text-success">//When the <code>sort()</code> function compares <code>two values</code>, it sends the values to the <code>compare function</code>, and sorts the values according to the returned <code>(negative, zero, positive)</code> value.
+
+                    //If the result is <code>negative</code>, <code>a</code> is sorted before <code>b</code>.
+
+                    //If the result is <code> positive</code>, <code>b</code> is sorted before <code>a</code>.
+
+                    //If the result is <code>0</code>, <code>no</code> changes are done with the <code>sort order of the two values</code>.
+
+                    <mark><code>//Example:</code></mark>
+
+                    //The <code>compare function</code> compares all the values in the array, <code>two values at a time (a, b)</code>.
+
+                    //When comparing <code>40</code> and <code>100</code>, the <code>sort()</code> method calls the <code>compare function(40, 100)</code>.
+
+                    //The function calculates <code>40 - 100 (a - b)</code>, and since the result is <code>negative (-60)</code>,  the sort function will <code>sort 40 as a value lower than 100</code>.</span>
+
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = points;     <span id="CompareFunctionOutput1" class="text-success">//</span>
+
+                    function myFunction1() {
+                      points.sort();
+                      document.getElementById("demo").innerHTML = points;   <span id="CompareFunctionOutput2" class="text-success">//</span>
+                    }
+                    function myFunction2() {
+                      points.sort(function(a, b){return a - b});
+                      document.getElementById("demo").innerHTML = points;   <span id="CompareFunctionOutput3" class="text-success">//</span>
+                    }
+
+                    <button id="CompareFunctionOutputBtn" class="btn btn-outline-danger">Click Me To See</button> 
+                </pre>
+                <h3>Sorting Array in Random Order</h3>
+                <code>Using a sort function, like explained above, you can sort an numeric array in random order</code>
+                <pre>
+
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = points;     <span class="text-success">//40, 100, 1, 5, 25, 10</span>
+
+                    function myFunction() {
+                      points.sort(function(){return 0.5 - Math.random()});
+                      document.getElementById("demo").innerHTML = points;   <span id="SortArrayRandomOrder" class="text-success">//</span>
+                    }
+                    <button id="SortArrayRandomOrderBtn" class="btn btn-outline-info">Click Me To Re-change</button>
+
+                    <code>The points.sort() method in the example above is not accurate. It will favor some numbers over others.</code>
+                    <code>The most popular correct method, is called the <mark><code>Fisher Yates shuffle</code></mark></code>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = points;         <span class="text-success">//40, 100, 1, 5, 25, 10</span>
+
+                    function myFunction() {
+                        for (let i = points.length -1; i > 0; i--) {
+                        let j = Math.floor(Math.random() * (i+1));
+                        let k = points[i];
+                        points[i] = points[j];
+                        points[j] = k;
+                      }
+                      document.getElementById("demo").innerHTML = points;       <span class="text-success" id="FisherYatesMethod">//</span>
+                    }
+                    <button class="btn btn-outline-info" id="FisherYatesMethodBtn">Click Me To See Change</button>
+                </pre>
+                <h3>Finding Lowest or Highest Array Value,</h3>
+                <code>
+                    -There are no built-in functions for finding the max or min value in an array. <br>
+                    -To find the lowest or highest valu you have 3 options:
+                    <ul>
+                        <li>Sort the array and read the first or last element</li>
+                        <li>Use Math.min() or Math.max()</li>
+                        <li>Write a home made function</li>
+                    </ul>
+                </code>
+                <pre>
+
+                    <mark>1.Find Min or Max with <code>sort()</code></mark>
+                    <code>- sort Ascending:</code>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    points.sort(function(a, b){return a - b});
+                    <span class="text-success">// now points[0] contains the lowest value
+                    // and points[points.length-1] contains the highest value</span>
+
+                    <code>- sort Descending:</code>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    points.sort(function(a, b){return b - a});
+                    <span class="text-success">// now points[0] contains the highest value
+                    // and points[points.length-1] contains the lowest value</span>
+
+                    <code>NOTE : </code>Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.
+
+                    <mark>2.Using <code>Math.min()</code>/<code>Math.max()</code> on an Array</mark>
+                    <code>- Using Math.min.apply to find the lowest number in an array:</code>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = myArrayMin(points);     <span class="text-success">//1.</span>
+
+                    function myArrayMin(arr) {
+                      return Math.min.apply(null, arr);
+                    }
+                    <code>NOTE : </code>Math.min.apply(null, [1, 2, 3]) is equivalent to Math.min(1, 2, 3)
+
+                    <code>- Using Math.max.apply to find the highest number in an array:</code>
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = myArrayMax(points);     <span class="text-success">//100.</span>
+
+                    function myArrayMax(arr) {
+                      return Math.max.apply(null, arr);
+                    }
+                    <code>NOTE : </code>Math.max.apply(null, [1, 2, 3]) is equivalent to Math.max(1, 2, 3).
+
+                    <mark>3.Write a <code>home made function</code>,</mark>
+                    <code>- JavaScript Array Minimum Method</code>
+                    -The fastest code to find the lowest number is to use a <code>home made</code> method.
+                    This function loops through an array comparing each value with the lowest value found:
+
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = myArrayMin(points);
+
+                    function myArrayMin(arr) {
+                      let len = arr.length;
+                      let min = Infinity;
+                      while (len--) {
+                        if (arr[len] < min) {
+                          min = arr[len];
+                        }
+                      }
+                      return min;
+                    }
+
+                    <code>- JavaScript Array Maximum Method</code>
+                    -The fastest code to find the highest number is to use a <code>home made</code> method.
+                    This function loops through an array comparing each value with the highest value found:
+
+                    const points = [40, 100, 1, 5, 25, 10];
+                    document.getElementById("demo").innerHTML = myArrayMax(points);
+                    
+                    function myArrayMax(arr) {
+                      let len = arr.length;
+                      let max = -Infinity;
+                      while (len--) {
+                        if (arr[len] > max) {
+                          max = arr[len];
+                        }
+                      }
+                      return max;
+                    }
+                </pre>
+                <h3>Sorting Object Arrays</h3>
+                <code>JavaScript arrays often contain objects:</code>
+                <pre>
+
+                    const cars = [
+                  {type:"Volvo", year:2016},
+                  {type:"Saab", year:2001},
+                  {type:"BMW", year:2010}
+                ];
+
+                <code>- Even if objects have properties of different data types, the sort() method can be used to sort the array.
+                - The solution is to write a compare function to compare the property values:</code>
+                cars.sort(function(a, b){return a.year - b.year});
+                displayCars();
+
+                function displayCars() {
+                  document.getElementById("demo").innerHTML =
+                  cars[0].type + " " + cars[0].year + "&#60;br>" +
+                  cars[1].type + " " + cars[1].year + "&#60;br>" +
+                  cars[2].type + " " + cars[2].year;
+                }
+
+                <mark><code>OUTPUT:</code></mark>
+                Saab 2001
+                BMW 2010
+                Volvo 2016
+
+                <code>- Comparing string properties is a little more complex:</code>
+                
+                    cars.sort(function(a, b){
+                      let x = a.type.toLowerCase();
+                      let y = b.type.toLowerCase();
+                      if (x < y) {return -1;}
+                      if (x > y) {return 1;}
+                      return 0;
+                    });
+                    displayCars();
+                  
+                  
+                  function displayCars() {
+                    document.getElementById("demo").innerHTML =
+                    cars[0].type + " " + cars[0].year + "&#60;br>" +
+                    cars[1].type + " " + cars[1].year + "&#60;br>" +
+                    cars[2].type + " " + cars[2].year;
+                  }
+
+                  <mark><code>OUTPUT: </code></mark>
+                  BMW 2010
+                  Saab 2001
+                  Volvo 2016
+                </pre>
+                <h3>Stable Array sort()</h3>
+                <code>When sorting elements on a value, the elements must keep their relative position to other elements with the same value.</code>
+                <pre>
+                    
+                    const myArr = [
+                      {name:"X00",price:100 },
+                      {name:"X01",price:100 },
+                      {name:"X02",price:100 },
+                      {name:"X03",price:100 },
+                      {name:"X04",price:110 },
+                      {name:"X05",price:110 },
+                      {name:"X06",price:110 },
+                      {name:"X07",price:110 },
+                      {name:"X08",price:120 },
+                      {name:"X09",price:120 },
+                      {name:"X10",price:120 },
+                      {name:"X11",price:120 },
+                      {name:"X12",price:130 },
+                      {name:"X13",price:130 },
+                      {name:"X14",price:130 },
+                      {name:"X15",price:130 },
+                      {name:"X16",price:140 },
+                      {name:"X17",price:140 },
+                      {name:"X18",price:140 },
+                      {name:"X19",price:140 }
+                    ];
+
+                    myArr.sort( (p1, p2) => {
+                      if (p1.price < p2.price) return -1;
+                      if (p1.price > p2.price) return 1;
+                      return 0;
+                    });
+
+                    let txt = "";
+                    myArr.forEach(myFunction);
+
+                    function myFunction(value) {
+                      txt += value.name + " " + value.price + "&#60;br>"; 
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+
+                    <mark><code>OUTPUT : </code></mark>
+                    X00 100
+                    X01 100
+                    X02 100
+                    X03 100
+                    X04 110
+                    X05 110
+                    X06 110
+                    X07 110
+                    X08 120
+                    X09 120
+                    X10 120
+                    X11 120
+                    X12 130
+                    X13 130
+                    X14 130
+                    X15 130
+                    X16 140
+                    X17 140
+                    X18 140
+                    X19 140
+                    <code>- In the example above, when sorting on price, the result is not allowed to come out with the names in an other relative position like this:</code>
+                    X01 100
+                    X03 100
+                    X00 100
+                    X03 100
+                    X05 110
+                    X04 110
+                    X06 110
+                    X07 110
+                </pre>
+                <hr>
+                <h3>Array <code>const</code></h3>
+
+        </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+    </body>
+</html>
