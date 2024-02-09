@@ -5,16 +5,16 @@ style.textContent = ":root{--theme-color: cyan;}";
     
     function optionChangeFunction(){
     if(document.getElementById('cyan').checked==true){     
-        style.textContent = ":root{--theme-color: cyan;}";
+        style.textContent = ":root{--theme-color: cyan;} .container{box-shadow: 0 0 50px #00ffff63;}";
     }
     else if(document.getElementById('lime').checked == true){
-        style.textContent = ":root{--theme-color: lime;}";
+        style.textContent = ":root{--theme-color: lime;} .container{box-shadow: 0 0 50px #00ff306e};";
     }
     else if(document.getElementById('yellow').checked == true){
-        style.textContent = ":root{--theme-color: yellow;}";
+        style.textContent = ":root{--theme-color: yellow;} .container{box-shadow: 0 0 50px #f4ff006e;}";
     }
     else if(document.getElementById('red').checked == true){
-        style.textContent = ":root{--theme-color: red;}"; 
+        style.textContent = ":root{--theme-color: red;} .container{box-shadow: 0 0 50px #ff000054;}"; 
     }
 }
 document.getElementById('cyan').onchange = function(){
@@ -30,6 +30,7 @@ document.getElementById('yellow').onchange = function(){
     optionChangeFunction();
 }
 $(document).ready(function() {
+        optionChangeFunction();
 $(window).on('scroll resize', function() {
     var viewportHeight = $(window).height();
     var topOffset = -400;
