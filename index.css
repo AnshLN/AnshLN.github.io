@@ -13,8 +13,7 @@ transition: all ease-out 600ms;}
 .container{
     background-color: black;
     margin-top: 50px;
-    margin-bottom: 50px;
-    box-shadow: 5px 5px 100px var(--theme-color);  
+    margin-bottom: 50px; 
     border-radius: 25px;
 }
 h1{color: white;text-shadow: 0 0 7px var(--theme-color);padding: 25px;border: 2px solid var(--theme-color);box-shadow: 0 0 25px inset var(--theme-color);margin-top: 25px;}
