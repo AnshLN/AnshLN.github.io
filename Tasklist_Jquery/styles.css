@@ -21,15 +21,20 @@
     margin: 5px;
     flex-basis: 100%;
 }
-#OutputBox input{
+#OutputBox textarea{
     border: none;
     padding: 4px;
+    resize: none;
+    width: 80%;
+    flex: 1;
+    margin-right: 15px;
+    overflow: hidden;
+    line-height: 1.5;
 }
-#OutputBox input:focus{
+#OutputBox textarea:focus{
     outline: none;
 }
 .EditButtonParent{
-
     width: 30px;
     height: 30px;
     display: inline-block; 
@@ -49,7 +54,7 @@
 .EditButtonClicked{
     border: 1px solid gray !important;
     border-radius: 5px;
-
+    resize: vertical !important;
 }
 body{background-color: white;}
 .Save{display: none;}
