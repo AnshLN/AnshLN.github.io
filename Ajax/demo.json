@@ -1,0 +1,8 @@
+{
+    "Table" : {
+        "Name":["Lorem","John","Anna","Peter"],
+        "Surname":["ipsum","David","Ayton","Averill"],
+        "Age":["28","45","32","54"],
+        "Country":["Austria","England","Brazil","Afghanistan"]
+    }
+}

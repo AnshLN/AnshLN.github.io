@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container p-5">
+        <div>
+            <h3>1. .txt Format</h3>
+            <button id="demoBtn" class="btn btn-outline-warning my-3">Click me to load content from demo.txt</button>&nbsp;<a target="_blank" href="demo.txt">demo.txt</a>
+            <h4>This is the demo.txt file</h4>
+            <iframe class="jsonExample" src="demo.txt" frameborder="0"></iframe>
+            <h5>Content : </h5>
+            <p id="demo"></p>
+        </div>
+        <hr class="my-5">
+        <div>
+            <h3>2. .json Format</h3>
+            <button id="demoBtn2" class="btn btn-outline-danger my-3">Click me To Load Table from demo.json</button>&nbsp;<a target="_blank" href="demo.json">demo.json</a>
+            <h4>This is the demo.json file</h4>
+            <iframe class="jsonExample" src="demo.json" frameborder="0"></iframe>
+            <h5>Table :</h5>
+            <div id="Output">
+                <table id="table" class="table table-striped table-hover">
+                    <thead>
+                        <tr><th>Name</th><th>Surname</th><th>Age</th><th>Country</th></tr>
+                    </thead>
+                </table>
+            </div>
+        </div> 
+        <hr class="my-5">
+        <div>
+            <h3>3. .xml Format</h3>
+            <button id="demoBtn3" class="btn btn-outline-dark my-3">Click me to load table from demo.xml</button>&nbsp;<a target="_blank" href="demo.xml">demo.xml</a>
+            <h5>Table : </h5> 
+            <table id="table2" class="table table-striped table-hover">
+                <thead>
+                    <tr><th>Name</th><th>Surname</th><th>Age</th><th>Country</th></tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <!-- JavaScript Content -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

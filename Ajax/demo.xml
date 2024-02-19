@@ -1,0 +1,26 @@
+<TABLE>
+    <USERINFO>
+        <NAME>Lorem</NAME>
+        <SURNAME>ipsum</SURNAME>
+        <AGE>28</AGE>
+        <COUNTRY>Austria</COUNTRY>
+    </USERINFO>
+    <USERINFO>
+        <NAME>John</NAME>
+        <SURNAME>David</SURNAME>
+        <AGE>45</AGE>
+        <COUNTRY>England</COUNTRY>
+    </USERINFO>
+    <USERINFO>
+        <NAME>Anna</NAME>
+        <SURNAME>Ayton</SURNAME>
+        <AGE>32</AGE>
+        <COUNTRY>Brazil</COUNTRY>
+    </USERINFO>
+    <USERINFO>
+        <NAME>Peter</NAME>
+        <SURNAME>Averill</SURNAME>
+        <AGE>54</AGE>
+        <COUNTRY>Afghanistan</COUNTRY>
+    </USERINFO>
+</TABLE>
