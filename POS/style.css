@@ -1,0 +1,76 @@
+
+.col-sm-7 ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.col-sm-7 li{
+    display: flex;
+}
+.col-sm-7 .itemImage{
+    width: 100px;
+    height: 100px;
+}
+.col-sm-7{
+    font-size: 20px;
+    font-weight: bold;
+}
+.col-sm-7 a{
+    border: 1px solid black;
+    padding: 25px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.col-sm-7 a div{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.col-sm-7 a div:last-child{
+    flex-basis: 100%;
+}
+.col-sm-5 .invoice{
+    height: 100vh;
+    border: 1px solid black;
+    padding: 10px;
+}
+.col-sm-5 ul{
+    list-style: none;
+    padding-left: 0;
+}
+.col-sm-5 li{
+    padding: 5px;
+    border: 1px solid black;
+    margin: 10px 10px;
+}
+.col-sm-5 a{
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+}
+.col-sm-5 img{
+    width: 50px;
+    height: 50px;
+}
+.total{
+    font-size: 25px;
+    font-weight: bold;
+}
+.singlePrice{
+    font-weight: bold;
+}
+.MultiPrice{
+    font-weight: bold;
+}
+.TotalQuant{
+    display: block;
+}
+.itemAddBtn{margin-right: 75px;}
