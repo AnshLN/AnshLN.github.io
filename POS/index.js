@@ -21,6 +21,14 @@ $(document).ready(function(){
     });
 });
 
+// Getting from localstorage then printing 
+$(document).ready(function(){
+    var fromLocalStorage = localStorage.getItem('key');
+    if(fromLocalStorage != null){
+        var item = JSON.parse(fromLocalStorage);
+        printFunction();
+    }
+});
 
 function printFunction(){
         if(item.Name.length > 0){
@@ -66,14 +74,7 @@ function removeAddFn(){
     });
 }
     
-// Getting from localstorage then printing 
-$(document).ready(function(){
-    var fromLocalStorage = localStorage.getItem('key');
-    if(fromLocalStorage != null){
-        var item = JSON.parse(fromLocalStorage);
-        printFunction();
-    }
-});
+
 
 // Animation on Hover Shopping cart
 $(document).ready(function(){
