@@ -70,7 +70,7 @@ function removeAddFn(){
 $(document).ready(function(){
     var fromLocalStorage = localStorage.getItem('key');
     if(fromLocalStorage != null){
-        item = JSON.parse(fromLocalStorage);
+        var item = JSON.parse(fromLocalStorage);
         printFunction();
     }
 });
