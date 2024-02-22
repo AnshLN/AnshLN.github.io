@@ -23,6 +23,7 @@ $(document).ready(function(){
 
 
 function printFunction(){
+        if(item.Name.length > 0){
     let txt = "<ul><h3>INVOICE : </h3>";
     let TotalPrice = 0;
     let TotalQuantity = 0;
@@ -48,6 +49,7 @@ function printFunction(){
     localStorage.setItem('key',objectInString);
 
     removeAddFn();   //reassigning remove btn's 
+        }
 }
 
 // '+' & '-' function
