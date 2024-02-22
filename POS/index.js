@@ -25,7 +25,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     var fromLocalStorage = localStorage.getItem('key');
     if(fromLocalStorage != null){
-        var item = JSON.parse(fromLocalStorage);
+        item = JSON.parse(fromLocalStorage);
         printFunction();
     }
 });
