@@ -1,78 +1,188 @@
+/* Define some colors as variables */
+:root {
+    --primary-color: #F0F8FF; /* A light blue color */
+    --secondary-color: #ebe723; /* A gold color */
+    --tertiary-color: #14e749; /* A deep pink color */
+    --text-color: #000000; /* A black color */
+    }
+    
+    /* Set the font family and size for the entire page */
+    * {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    }
+    
+    /* Set the background color and margin for the body */
+    body {
+    background-color: var(--primary-color);
+    margin: 0;
+    }
+    
+    /* Center the main container and give it some padding */
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    
 
-*{font-family: "Audiowide", sans-serif;transition: all ease-out 300ms;}
-
-body{
-    background-color: rgb(0, 0, 0);
-}
-::selection{
-    background-color: black;
-    color: rgb(0, 255, 76);
-}
-hr{width: 0;
-transition: all ease-out 600ms;}
-.container{
-    background-color: black;
-    margin-top: 50px;
-    margin-bottom: 50px; 
-    border-radius: 25px;
-}
-h1{color: white;text-shadow: 0 0 7px var(--theme-color);padding: 25px;border: 2px solid var(--theme-color);box-shadow: 0 0 25px inset var(--theme-color);margin-top: 25px;}
-ol{list-style-type: none;padding-left: 0;}
-ol li a{
-
-    color: var(--theme-color);
-    background-color: black;
- 
-    transition: all ease-out 300ms;
-    border-radius: 6px;
-}
-ol li a:hover{
-    text-shadow: 0 0 20px var(--theme-color);
-}
-ol li{
-    color: white;
-    font-size: 20px;
+    /* Style the heading with a border, a rounded corner, and a secondary color */
+    h1 {
+   border-bottom: 5px solid var(--secondary-color);
+   border-radius: 0;
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    /* Add a bounce animation to the heading */
+    animation: bounce 1s infinite;
+    }
+    
+    /* Define the bounce animation */
+    @keyframes bounce {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    }
+    }
+    
+    /* Style the option container with a flexbox layout and some margin */
+    .option-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    }
+    
+    /* Style the span element with a tertiary color and some margin */
+    span {
+    color: var(--tertiary-color);
+    margin-right: 10px;
+    }
+    
+    /* Style the input elements with a secondary color and some margin */
+    input {
+    background-color: var(--secondary-color);
+    margin: 0 5px;
+    /* Add a scale transition to the input elements */
+    transition: transform 0.3s;
+    }
+    
+    /* Scale the input elements when hovered */
+    input:hover {
+    transform: scale(1.2);
+    }
+    
+    /* Style the ordered list with a counter and some padding */
+    ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 20px;
+    }
+    
+    /* Style the list items with a counter and a tertiary color */
+    li {
     font-weight: bold;
-    padding: 30px;
-}
-.iframe{
+    font-size: larger;
+    counter-increment: item;
+    margin-bottom: 20px;
+    }
+    
+    /* Style the list item numbers with a pseudo-element and a text color */
+    li::before {
+    content: counter(item) ". ";
+    color: var(--text-color);
+    }
+    
+    /* Style the links with a text color and no underline */
+    a {
+    color: var(--text-color);
+    text-decoration: underline;
+    /* Add a flip animation to the links */
+    animation: flip 0.5s;
+    }
+    
+    /* Define the flip animation */
+    @keyframes flip {
+    0% {
+    transform: rotateY(0);
+    }
+    50% {
+    transform: rotateY(180deg);
+    }
+    100% {
+    transform: rotateY(360deg);
+    }
+    }
+    
+    /* Style the iframes with a border, a rounded corner, and a fixed height */
+    iframe {
+    border: 5px solid var(--tertiary-color);
+    border-radius: 10px;
+    height: 300px;
     width: 100%;
-    height: 500px;
-    margin-bottom: 25px;
-    margin-bottom: 85px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.692);
-    border-radius: 15px;
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.267);
-    transform: translateX(-80px);
+    /* Add a fade-in animation to the iframes */
+    animation: fade-in 1s;
+    }
+    
+    /* Define the fade-in animation */
+    @keyframes fade-in {
+    0% {
     opacity: 0;
-    transition: all ease-out 400ms;
-}
-.iframe-added{
-    transform: translateX(0);
+    }
+    100% {
     opacity: 1;
-}
-hr{background-color: white; color: white;}
-.option-container{display: flex;gap: 10px;margin-top: 25px;}
-.option-container span{
-    color: white;
-}
-.option-container .form-control{
-    height: 25px;
-    width: 25px;
-    border-radius: 15px;
-    transition: all ease-out 300ms;
-    border: none;
-}
-.option-container .form-control:checked{
-    outline-offset: 5px;
-    outline: 1px solid var(--theme-color);
-    box-shadow: 0 0 15px var(--theme-color);
-}
-#cyan{background-color: cyan;}
-#lime{background-color: lime;}
-#yellow{background-color: yellow;}
-#red{background-color: red;}
-.row-1{display: flex;justify-content: space-around;align-items: center;}
-.row-1 {color: rgba(0, 81, 255, 0.842);}
-.row-1 a{color: rgba(0, 81, 255, 0.842);}
+    }
+    }
+    
+    /* Style the footer with a flexbox layout and a secondary color */
+    footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    }
+    
+    /* Style the first row of the footer with a flexbox layout and some padding */
+    .row-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    }
+    
+    /* Style the design by footer with a text color and a smaller font size */
+    .design-by-footer {
+    color: var(--text-color);
+    font-size: 0.8em;
+    }
+    
+    /* Style the contact us link with a text color and a larger font size */
+    .contact-us {
+    color: var(--text-color);
+    font-size: 1.2em;
+    }
+    
+    /* Style the second row of the footer with a tertiary color and a fixed height */
+    .row-2 {
+    background-color: var(--tertiary-color);
+    height: 20px;
+    }
+    
+    /* Use media queries to make the web page responsive for different screen sizes */
+    @media (max-width: 768px) {
+    /* Reduce the font size for smaller screens */
+    * {
+    font-size: 16px;
+    }
+    
+    /* Reduce the padding for the main container */
+    .container {
+    padding: 10px;
+    }
+    
+    /* Reduce the height for the iframes */
+    iframe {
+    height: 200px;
+    }
+    }
