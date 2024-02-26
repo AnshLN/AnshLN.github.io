@@ -31,7 +31,7 @@ $(document).ready(function(){
 });
 
 function printFunction(){
-        if(item.Name.length > 0){
+    
     let txt = "<ul><h3>INVOICE : </h3>";
     let TotalPrice = 0;
     let TotalQuantity = 0;
@@ -43,7 +43,7 @@ function printFunction(){
             item.Price.splice(i,1);
         }
         else{
-        txt += '<li data-key=' + i +  '><img src="' + item.Name[i] + '"><a href ="javascript:void(0)" class="itemRemoveBtn">-</a> &nbsp;' + item.Quantity[i] + '&nbsp; <a href ="javascript:void(0)" class="itemAddBtn">+</a>price : <span class="singlePrice">' + item.Price[i] + '₹</span>&nbsp;total : <span class="MultiPrice">' + item.Price[i]*item.Quantity[i] + '₹</span></li>'; 
+        txt += '<li data-key=' + i +  '><img src="' + item.Name[i] + '"><a href ="javascript:void(0)" class="itemRemoveBtn">-</a> &nbsp;' + item.Quantity[i] + '&nbsp; <a href="javascript:void(0)" class="itemAddBtn">+</a>price : <span class="singlePrice">' + item.Price[i] + '₹</span>&nbsp;total : <span class="MultiPrice">' + item.Price[i]*item.Quantity[i] + '₹</span><a href="javascript:void(0)" class="deleteBtn">delete</a></li>'; 
         TotalPrice += item.Price[i]*item.Quantity[i];
         TotalQuantity += item.Quantity[i];
         i++;
@@ -53,12 +53,11 @@ function printFunction(){
     $(".invoice").html(txt);
 
     // saving in localstorage
-    objectInString = JSON.stringify(item);
-    localStorage.setItem('key',objectInString);
+    localStorage.setItem('key',JSON.stringify(item));
 
     removeAddFn();   //reassigning remove btn's 
-        }
 }
+
 
 // '+' & '-' function
 function removeAddFn(){
@@ -71,6 +70,14 @@ function removeAddFn(){
         var remover = $(this).parent().attr('data-key');
         item.Quantity[remover] += 1;
         printFunction();
+    });
+    $('.deleteBtn').click(function(){
+        var deleter = $(this).parent().attr('data-key');
+        item.uniqueKey.splice(deleter,1);
+            item.Name.splice(deleter,1);
+            item.Quantity.splice(deleter,1);
+            item.Price.splice(deleter,1);
+            printFunction();
     });
 }
     
