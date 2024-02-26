@@ -314,6 +314,7 @@ header .nav-item{flex-grow: 1;}
     top: 30%;
     opacity: 70%;
     letter-spacing: 3px;
+    display: none;
 }
 .banner-aside-ad-long-line{
     width: 130px;
