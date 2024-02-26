@@ -1,0 +1,61 @@
+
+#OutputBox{
+    list-style-type: none;
+    padding-left: 0;
+    
+}
+#OutputBox > li {
+    box-shadow: 7px 5px black;
+    margin: 10px 0;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#OutputBox span{
+    display: block;
+    font-weight: bold;
+    font-size: smaller;
+    margin: 5px;
+    flex-basis: 100%;
+}
+#OutputBox textarea{
+    border: none;
+    padding: 4px;
+    resize: none;
+    width: 80%;
+    flex: 1;
+    margin-right: 15px;
+    overflow: hidden;
+    line-height: 1.5;
+}
+#OutputBox textarea:focus{
+    outline: none;
+}
+.EditButtonParent{
+    width: 30px;
+    height: 30px;
+    display: inline-block; 
+    margin: 0px 10px;
+    margin-left: auto;
+}
+.DeleteButtonParent{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0px 10px;
+}
+.EditButtonParent img,.DeleteButtonParent img{
+    width: 100%;
+    height: 100%;
+}
+.EditButtonClicked{
+    border: 1px solid gray !important;
+    border-radius: 5px;
+    resize: vertical !important;
+}
+body{background-color: white;}
+.Save{display: none;}
+
