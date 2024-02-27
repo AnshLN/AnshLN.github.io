@@ -48,6 +48,9 @@ body{overflow-x: hidden;}
     padding: 5px;
     border: 1px solid black;
     margin: 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 .col-sm-5 a{
     padding: 5px;
@@ -73,4 +76,4 @@ body{overflow-x: hidden;}
 .TotalQuant{
     display: block;
 }
-.itemAddBtn{margin-right: 75px;}
+
