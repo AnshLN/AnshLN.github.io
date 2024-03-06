@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    font-weight: bold;
+    padding: 50px;
+}
+.container h4{
+    margin: 0;
+    padding: 0;
+}
